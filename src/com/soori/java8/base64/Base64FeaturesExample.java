@@ -32,7 +32,7 @@ public class Base64FeaturesExample {
         String mimeEncoded = mimeEncoder.encodeToString(mimeString.getBytes());
         System.out.println("MIME Encoded String: \n" + mimeEncoded);
 
-        // MIME Decoding
+// MIME Decoding
         Base64.Decoder mimeDecoder = Base64.getMimeDecoder();
         String mimeDecoded = new String(mimeDecoder.decode(mimeEncoded));
         System.out.println("MIME Decoded String: " + mimeDecoded);
