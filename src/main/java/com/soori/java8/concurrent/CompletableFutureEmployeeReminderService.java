@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import com.soori.java8.concurrent.database.EmployeeDatabase;
 import com.soori.java8.concurrent.dto.Employee;
 
-public class EmployeeReminderService {
+public class CompletableFutureEmployeeReminderService {
 
 	public CompletableFuture<Void> sendReminderToEmployee() {
 //below will guarantee that , new thread created , Customer threads
@@ -32,7 +32,7 @@ public class EmployeeReminderService {
 			return employees.stream().map(Employee::getEmail).collect(Collectors.toList());
 		}, executor).thenAcceptAsync((emails) -> {
 			System.out.println("send email  : " + Thread.currentThread().getName());
-			emails.forEach(EmployeeReminderService::sendEmail);
+			emails.forEach(CompletableFutureEmployeeReminderService::sendEmail);
 		}, executor);
 		return voidCompletableFuture;
 	}
@@ -57,7 +57,7 @@ public class EmployeeReminderService {
 			return employees.stream().map(Employee::getEmail).collect(Collectors.toList());
 		}).thenAcceptAsync((emails) -> {
 			System.out.println("send email  : " + Thread.currentThread().getName());
-			emails.forEach(EmployeeReminderService::sendEmail);
+			emails.forEach(CompletableFutureEmployeeReminderService::sendEmail);
 		});
 		return voidCompletableFuture;
 	}
@@ -94,7 +94,7 @@ public class EmployeeReminderService {
 
 		CompletableFuture<Void> sendEmailsFuture = getEmailsFuture.thenAcceptAsync((emails) -> {
 			System.out.println("send email  : " + Thread.currentThread().getName());
-			emails.forEach(EmployeeReminderService::sendEmail);
+			emails.forEach(CompletableFutureEmployeeReminderService::sendEmail);
 		}, executor);
 
 		return sendEmailsFuture;
@@ -106,7 +106,7 @@ public class EmployeeReminderService {
 
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-		EmployeeReminderService service = new EmployeeReminderService();
+		CompletableFutureEmployeeReminderService service = new CompletableFutureEmployeeReminderService();
 		service.sendReminderToEmployee().get();
 //		service.sendReminderToEmployeeOld().get();
 	}
