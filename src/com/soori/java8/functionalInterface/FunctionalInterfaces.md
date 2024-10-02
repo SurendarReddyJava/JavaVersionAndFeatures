@@ -44,15 +44,4 @@ Java 8 introduced several functional interfaces to support lambda expressions an
 42. **ToLongFunction<T>**: Represents a function that accepts one argument and produces a long-valued result.
 43. **UnaryOperator<T>**: Represents an operation on a single operand that produces a result of the same type as its operand¹²³.
 
-These interfaces are part of the `java.util.function` package and are widely used in lambda expressions and stream operations. If you need more details or examples on any specific interface, feel free to ask!
 
-¹: [Baeldung](https://www.baeldung.com/java-8-functional-interfaces)
-²: [Javatpoint](https://www.javatpoint.com/java-8-functional-interfaces)
-³: [JavaTute](https://javatute.com/core-java/java-8-functional-interface-examples/)
-
-Source: Conversation with Copilot, 1/10/2024
-(1) Functional Interfaces in Java - Baeldung. https://www.baeldung.com/java-8-functional-interfaces.
-(2) Java 8 Functional Interfaces - Javatpoint. https://www.javatpoint.com/java-8-functional-interfaces.
-(3) Java 8 Interface Features - Javatpoint. https://www.javatpoint.com/java-8-interface-features.
-(4) Mastering Functional Interfaces in Java 8 | Java Tech Blog. https://javanexus.com/blog/mastering-functional-interfaces-java-8.
-(5) Java 8 Functional Interface Examples - JavaTute. https://javatute.com/core-java/java-8-functional-interface-examples/.
