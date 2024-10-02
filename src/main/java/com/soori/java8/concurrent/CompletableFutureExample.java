@@ -6,6 +6,7 @@ public class CompletableFutureExample {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             try {
+            	
                 Thread.sleep(1000); // Simulate long-running task
             } catch (InterruptedException e) {
                 e.printStackTrace();

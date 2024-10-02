@@ -58,3 +58,4 @@ testfiles
 
 # LibreOffice lock file
 .~lock.*
+/.gradle/
