@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Spliterator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -49,13 +50,16 @@ public class Java8StreamExample {
 				.collect(Collectors.toMap(Employee::getEid, e -> getPrimaryAddress.apply(e.getAddresses())));
 
 	    Function<Integer, String> intToString = String::valueOf;
-	    
 		employees.stream().map(e -> String.valueOf(e.getEid())).collect(Collectors.joining(","));
 		employees.stream().map(Employee::getEid).map(intToString).collect(Collectors.joining(","));
 		
+		//Split iterator
+		Spliterator<Employee> spliteratorEmps = employees.stream().spliterator();
+		System.out.println("spliteratorEmps "+spliteratorEmps.estimateSize());//3 employees
 		
-			 
-	        
+		Spliterator<Employee> spliteratorEmpsPart2 = spliteratorEmps.trySplit();
+		System.out.println("spliteratorEmps "+spliteratorEmps.estimateSize());//2 employees
+		System.out.println("spliteratorEmpsPart2 "+spliteratorEmpsPart2.estimateSize());//1 employees
 		
 	}
 
