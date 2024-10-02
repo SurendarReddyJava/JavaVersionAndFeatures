@@ -29,14 +29,3 @@ Java 8 introduced several default methods in the Java API, particularly in the `
 
 These default methods significantly enhance the functionality and flexibility of the Java Collections Framework, making it easier to work with collections in a more functional and expressive way¹²³.
 
-If you have any specific questions about these methods or need examples, feel free to ask!
-
-¹: [GeeksforGeeks](https://www.geeksforgeeks.org/default-methods-java/)
-²: [DigitalOcean](https://www.digitalocean.com/community/tutorials/java-8-features-with-examples)
-³: [Java Guides](https://www.javaguides.net/2018/07/java-8-static-and-default-methods-in-interface.html)
-
-Source: Conversation with Copilot, 2/10/2024
-(1) Default Methods In Java 8 - GeeksforGeeks. https://www.geeksforgeeks.org/default-methods-java/.
-(2) Default methods in Java 8, and what it changes in API design - A Java geek. https://blog.frankel.ch/default-methods-java-8/.
-(3) Java 8 Features with Examples - DigitalOcean. https://www.digitalocean.com/community/tutorials/java-8-features-with-examples.
-(4) Java 8 Static and Default Methods in Interface - Java Guides. https://www.javaguides.net/2018/07/java-8-static-and-default-methods-in-interface.html.
