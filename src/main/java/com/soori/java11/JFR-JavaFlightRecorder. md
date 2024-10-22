@@ -47,3 +47,6 @@ Java Flight Recorder (JFR) is a powerful monitoring and profiling tool built int
 ## Conclusion:
 
 Java Flight Recorder is a valuable tool for Java developers and operators, enabling them to gain deep insights into application performance and behavior. Its low-overhead design, extensive event collection capabilities, and integration with Java Mission Control make it an essential part of the modern Java development toolkit. Whether in development or production, JFR helps ensure that Java applications run efficiently and reliably.
+
+TODO: Java mission control Tool screenshot. ****************
+https://www.baeldung.com/java-flight-recorder-monitoring
