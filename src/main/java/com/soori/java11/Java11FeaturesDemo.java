@@ -1,11 +1,13 @@
 package com.soori.java11;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
 
@@ -129,13 +131,23 @@ public class Java11FeaturesDemo {
     }
 
     /**
+     * Demonstrates file operations before Java 11.
+     */
+    public void fileOperationsBeforeJava11() throws IOException {
+        Path path = Paths.get("example.txt");
+        Files.write(path, "Hello, World!".getBytes());
+        String content = new String(Files.readAllBytes(path));
+        System.out.println("File Operations Before Java 11: " + content);
+    }
+
+    /**
      * Demonstrates new File methods in Java 11.
      */
-    public void newFileMethods() throws Exception {
+    public void newFileMethodsJava11() throws IOException {
         Path path = Files.createTempFile("example", ".txt");
         Files.writeString(path, "Hello, World!");
         String content = Files.readString(path);
-        System.out.println("New File Methods: " + content);
+        System.out.println("New File Methods in Java 11: " + content);
     }
 
     /**
@@ -193,7 +205,8 @@ public class Java11FeaturesDemo {
         demo.unicode10Support();
         demo.zgcGarbageCollector();
         demo.removeJavaEEAndCORBA();
-        demo.newFileMethods();
+        demo.newFileMethodsJava11();
+        demo.fileOperationsBeforeJava11();
         demo.keyAgreementWithCurve25519AndCurve448();
         demo.chaCha20AndPoly1305();
         demo.tls13Support();
