@@ -91,6 +91,7 @@ public class Java11FeaturesDemo {
      * Demonstrates Launch Single-File Source-Code Programs.
      */
     public void launchSingleFileSourceCodePrograms() {
+        //java HelloWorld.java -> this command internally compiles and runs the program.
         // This feature is related to JVM internals and not directly demonstrable in code.
         System.out.println("Launch Single-File Source-Code Programs: JVM internal feature.");
     }
