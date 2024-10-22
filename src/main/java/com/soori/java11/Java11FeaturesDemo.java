@@ -32,15 +32,27 @@ public class Java11FeaturesDemo {
     }
 
     /**
-     * Demonstrates the HttpClient API.
+     * Demonstrates the HttpClient API with a synchronous request.
      */
-    public void httpClientAPI() throws Exception {
+    public void httpClientAPISynchronous() throws Exception {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://example.com"))
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println("HttpClient API: " + response.body());
+        System.out.println("HttpClient API (Synchronous): " + response.body());
+    }
+
+    /**
+     * Demonstrates the HttpClient API with an asynchronous request.
+     */
+    public void httpClientAPIAsynchronous() {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://example.com"))
+                .build();
+        client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenAccept(response -> System.out.println("HttpClient API (Asynchronous): " + response.body()));
     }
 
     /**
@@ -169,7 +181,8 @@ public class Java11FeaturesDemo {
         Java11FeaturesDemo demo = new Java11FeaturesDemo();
         demo.newStringMethods();
         demo.localVariableSyntaxForLambda();
-        demo.httpClientAPI();
+        demo.httpClientAPISynchronous();
+        demo.httpClientAPIAsynchronous();
         demo.nestBasedAccessControl();
         demo.dynamicClassFileConstants();
         demo.epsilonGarbageCollector();
