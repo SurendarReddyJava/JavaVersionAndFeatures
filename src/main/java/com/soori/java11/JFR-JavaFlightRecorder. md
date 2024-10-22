@@ -1,0 +1,49 @@
+# Java Flight Recorder (JFR)
+
+Java Flight Recorder (JFR) is a powerful monitoring and profiling tool built into the Java Development Kit (JDK) starting with Java 11. It provides developers and operators with insights into the performance of Java applications, helping them identify bottlenecks, troubleshoot issues, and optimize application performance. Here are some key features and aspects of Java Flight Recorder:
+
+## Key Features of Java Flight Recorder:
+
+1. **Low-Overhead Monitoring:**
+   - JFR is designed to have minimal impact on application performance. It collects data in a way that does not significantly affect the running application, making it suitable for production environments.
+
+2. **Event-Based Data Collection:**
+   - JFR collects a wide range of events, such as garbage collection, method invocations, thread activity, and more. These events are recorded in a structured format, allowing for detailed analysis.
+
+3. **Continuous and On-Demand Recording:**
+   - Users can configure JFR to record data continuously or start and stop recordings on demand. This flexibility allows developers to capture data during specific periods or events of interest.
+
+4. **Profiling and Diagnostics:**
+   - JFR provides profiling capabilities, allowing developers to analyze CPU usage, memory allocation, and thread contention. This information helps identify performance bottlenecks and optimize resource usage.
+
+5. **Flight Recorder Events:**
+   - JFR includes a variety of predefined events, such as:
+      - **Garbage Collection Events:** Details about garbage collection activity, including pause times and memory freed.
+      - **Thread Events:** Information about thread lifecycle, including creation, termination, and state changes.
+      - **Method Events:** Data on method calls, execution time, and invocation counts.
+      - **I/O Events:** Information about input and output operations.
+
+6. **Integration with Java Mission Control:**
+   - Java Flight Recorder works seamlessly with Java Mission Control (JMC), a separate tool for analyzing JFR recordings. JMC provides a graphical interface for visualizing and interpreting the data collected by JFR, making it easier to identify trends and performance issues.
+
+7. **Heap Dump Integration:**
+   - JFR can capture heap dumps, which are snapshots of memory usage at a particular point in time. This feature is useful for diagnosing memory leaks and analyzing object retention.
+
+8. **Configurability:**
+   - Users can customize the events that are recorded and adjust the sampling frequency. This configurability allows for more targeted data collection based on the application's specific needs.
+
+9. **Recording Formats:**
+   - JFR recordings can be saved to a file, allowing for offline analysis. These files can be shared with other developers or operators for collaborative troubleshooting.
+
+10. **Support for Production Environments:**
+   - JFR is designed to be used in production, providing insights without requiring the application to be stopped or restarted.
+
+## Use Cases:
+
+- **Performance Tuning:** By analyzing CPU usage, memory allocations, and thread behavior, developers can fine-tune applications for better performance.
+- **Troubleshooting:** JFR can help diagnose issues related to application crashes, slow performance, or resource contention by providing detailed event logs.
+- **Understanding Usage Patterns:** By analyzing recordings, teams can gain insights into how applications are used, which features are most accessed, and how resources are utilized over time.
+
+## Conclusion:
+
+Java Flight Recorder is a valuable tool for Java developers and operators, enabling them to gain deep insights into application performance and behavior. Its low-overhead design, extensive event collection capabilities, and integration with Java Mission Control make it an essential part of the modern Java development toolkit. Whether in development or production, JFR helps ensure that Java applications run efficiently and reliably.
