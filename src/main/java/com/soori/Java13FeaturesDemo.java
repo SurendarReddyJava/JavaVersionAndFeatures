@@ -6,11 +6,14 @@ public class Java13FeaturesDemo {
      * Demonstrates Text Blocks (Preview).
      */
     public void textBlocks() {
-        String textBlock = """
-            This is a text block.
-            It spans multiple lines.
-            """;
-        System.out.println("Text Block: " + textBlock);
+        String json = """
+                {
+                    "name": "John",
+                    "age": 30,
+                    "city": "New York"
+                }
+                """;
+        System.out.println("Text Block: " + json);
     }
 
     /**
