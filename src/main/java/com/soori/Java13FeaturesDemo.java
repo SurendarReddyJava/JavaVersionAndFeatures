@@ -1,4 +1,3 @@
-
 package com.soori.java13;
 
 public class Java13FeaturesDemo {
@@ -17,8 +16,7 @@ public class Java13FeaturesDemo {
     /**
      * Demonstrates Switch Expressions (Preview).
      */
-    public void switchExpressions() {
-        String day = "MONDAY";
+    public void switchExpressions(String day) {
         int numLetters = switch (day) {
             case "MONDAY", "FRIDAY", "SUNDAY" -> 6;
             case "TUESDAY" -> 7;
@@ -56,7 +54,7 @@ public class Java13FeaturesDemo {
     public static void main(String[] args) {
         Java13FeaturesDemo demo = new Java13FeaturesDemo();
         demo.textBlocks();
-        demo.switchExpressions();
+        demo.switchExpressions("MONDAY");
         demo.reimplementLegacySocketAPI();
         demo.dynamicCDSArchives();
         demo.zgcUncommitUnusedMemory();
