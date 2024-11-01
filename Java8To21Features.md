@@ -1,3 +1,32 @@
+
+# Java versions and their release dates
+
+| Java Version      | Approximate Release Date |
+|-------------------|---|
+| JDK 1.0           | January 23, 1996 |
+| JDK 1.1           | February 19, 1997 |
+| J2SE 1.2 (Java 2) | December 8, 1998 |
+| J2SE 1.3          | May 8, 2000 |
+| J2SE 1.4          | February 6, 2002 |
+| J2SE 5.0 (Java 5) | September 30, 2004 |
+| Java SE 6         | December 11, 2006 |
+| Java SE 7         | July 28, 2011 |
+| Java SE 8-LTS       | March 18, 2014 |
+| Java SE 9         | September 21, 2017 |
+| Java SE 10        | March 20, 2018 |
+| Java SE 11-LTS    | September 25, 2018 |
+| Java SE 12        | March 19, 2019 |
+| Java SE 13        | September 17, 2019 |
+| Java SE 14        | March 17, 2020 |
+| Java SE 15        | September 15, 2020 |
+| Java SE 16        | March 16, 2021 |
+| Java SE 17-LTS    | September 14, 2021 |
+| Java SE 18        | March 22, 2022 |
+| Java SE 19        | September 20, 2022 |
+| Java SE 20        | March 21, 2023 |
+| Java SE 21-LTS    | September 19, 2023 |
+
+
 # Java 8: A Deep Dive into Key Features
 
 Java 8 marked a significant milestone in the evolution of the Java programming language, introducing several powerful features designed to enhance code readability, efficiency, and expressiveness.  Let's explore these key features in detail:
